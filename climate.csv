@@ -195,3 +195,8 @@ time,temp,rh,co2,dew,abs_gm3,quarto_switch,quarto_mode,quarto_setpoint,quarto_fa
 2026-11-16 20:58:23,19.2,72,499,14.0,11.87,on,dry,18,auto,17,1,20049,ready,on,dry,18,auto,19,15,45356,ready
 2026-11-16 20:59:24,19.1,72,499,13.9,11.8,on,dry,18,auto,17,1,20049,ready,on,dry,18,auto,19,15,45356,ready
 2026-11-16 21:00:24,19.1,72,628,13.9,11.8,on,dry,18,auto,17,1,20049,ready,on,dry,18,auto,19,15,45356,ready
+2026-11-16 21:01:25,19.1,72,628,13.9,11.8,on,dry,18,auto,17,1,20049,ready,on,dry,18,auto,19,15,45356,ready
+2026-11-16 21:02:25,19.1,72,628,13.9,11.8,on,dry,18,auto,18,1,20049,ready,on,dry,18,auto,19,15,45356,ready
+2026-11-16 21:03:26,19.1,72,628,13.9,11.8,on,dry,18,auto,18,1,20049,ready,on,dry,18,auto,19,15,45356,ready
+2026-11-16 21:04:26,19.0,72,628,13.8,11.73,on,dry,18,auto,18,1,20049,ready,on,dry,18,auto,19,15,45356,ready
+2026-11-16 21:05:28,19.0,72,628,13.8,11.73,on,dry,18,auto,18,1,20049,ready,on,dry,18,auto,19,12,45392,ready
