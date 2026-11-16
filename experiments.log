@@ -1,3 +1,7 @@
 2026-11-16 17:43:42 E1 start: sala dry 18, autoclean off
 2026-11-16 18:24:29 E2 start: sala cool 18 fan low
 2026-11-16 18:50:24 E3 start: both units dry 18, autoclean off both
+2026-11-16 19:01:50 E3 result: +4.8 g/m3/h in 10 min (bedroom air mixing after doors opened)
+2026-11-16 19:01:50 E4 start: sala dry 18 + quarto heat 24, doors open
+2026-11-16 19:03:33 cycle: start HI=21.5 LO=19.5 heat_sp=24.0
+2026-11-16 19:03:44 cycle: None -> heat at 18.2C RH 70%

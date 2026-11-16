@@ -37,10 +37,19 @@ Scored from the living-room sensor. `climate.csv` has the minute-by-minute data 
 |---|---|---|---|
 | E1 | sala: dry mode, 18°C, Auto Clean off | 4.4 g/m³/h (13.7 → 10.8) | ~180 W |
 | E2 | sala: cool mode, 18°C, fan low | 1.8 g/m³/h (10.7 → 10.0) | ~190 W |
-| E3 | both units: dry mode, 18°C (doors open) | running | |
+| E3 | both units: dry mode, 18°C (doors open) | **+4.8 g/m³/h**, humidity rose (10.0 → 10.8 in 10 min) | ~200 W |
+| E4 | both units alternate: heat to 21.5°C, then dry down to 19.5°C (`cycle.py`) | running | |
 
 E2 started with drier air than E1 (less water left to pull out), so the comparison isn't perfectly
 fair, but dry mode clearly did better.
+
+E3 went backwards because the doors were opened when I got home: humid bedroom air mixed into the
+living room, which had been dried on its own until then. The bedroom was holding a lot of the water.
+
+**Heating and drying at the same time is impossible on this system.** While either unit is in dry or
+cool mode, SmartThings drops `heat` from both units' available modes. They share one outdoor unit
+(multi-split), and it can only run one direction at a time. Drying in winter cools the house, so E4
+alternates instead: heat until the living room hits 21.5°C, then dry until it falls to 19.5°C.
 
 ## How it works
 
@@ -50,6 +59,7 @@ fair, but dry mode clearly did better.
 | `decode.py` | Decodes the Meter Pro CO2 advert (temperature, humidity, CO2) and computes dew point and absolute humidity. |
 | `st.py` | Minimal SmartThings client: read AC status, set mode, setpoint, fan and Auto Clean. Reads the token from `~/.config/smartthings/token` and the device IDs from `~/.config/smartthings/devices.json`. |
 | `logger.py` | Every minute, writes the latest sensor reading and both ACs' state to `climate.csv`. |
+| `cycle.py` | `python3 cycle.py 21.5 19.5 24`: alternates both ACs between heat and dry, switching on the living-room temperature. |
 | `rate.py` | `python3 rate.py "YYYY-MM-DD HH:MM" "YYYY-MM-DD HH:MM"` gives the water removed per hour and the energy used over that window. |
 
 ```bash

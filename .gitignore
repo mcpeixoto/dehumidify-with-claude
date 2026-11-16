@@ -4,3 +4,4 @@ status_*.json
 logger.log
 __pycache__/
 push.log
+cycle.log

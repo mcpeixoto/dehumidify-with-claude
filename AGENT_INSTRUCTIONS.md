@@ -200,7 +200,7 @@ Public home-experiment log: Mac reads a SwitchBot Meter Pro CO2 over BLE (`BLESc
 `st.py` drives two Samsung ACs through SmartThings, `logger.py` writes `climate.csv` every minute.
 
 - **Data commits go straight to `main`** (`climate.csv`, `experiments.log`, README results table).
-  No CI, nothing to deploy. Code changes still go through a PR.
+  No CI, nothing to deploy; small code changes go straight to `main` too.
 - **Public repo.** Never commit the SmartThings token, device IDs, BLE addresses, or raw `ble.jsonl`
   / `status_*.json` (gitignored). Grep the staged diff for them before every push.
 - Score experiments in absolute humidity (g/m³) with `rate.py`, never RH %.
