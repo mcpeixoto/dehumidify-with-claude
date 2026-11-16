@@ -87,3 +87,13 @@ time,temp,rh,co2,dew,abs_gm3,quarto_switch,quarto_mode,quarto_setpoint,quarto_fa
 2026-11-16 19:09:27,18.5,78,432,14.6,12.34,on,heat,24,auto,18,5,19883,ready,on,fan,24,turbo,19,11,44910,ready
 2026-11-16 19:10:27,18.7,78,432,14.8,12.48,on,heat,24,auto,19,5,19883,ready,on,fan,24,turbo,20,11,44910,ready
 2026-11-16 19:11:27,18.7,81,432,15.4,12.96,on,heat,24,auto,19,5,19883,ready,on,fan,24,turbo,20,11,44910,ready
+2026-11-16 19:12:28,18.9,81,432,15.6,13.12,on,heat,24,auto,19,5,19883,ready,on,heat,24,auto,20,18,44917,ready
+2026-11-16 19:13:28,18.9,81,432,15.6,13.12,on,heat,24,auto,20,5,19883,ready,on,heat,24,auto,20,18,44917,ready
+2026-11-16 19:14:29,19.0,81,432,15.7,13.2,on,heat,24,auto,21,5,19883,ready,on,heat,24,auto,21,18,44917,ready
+2026-11-16 19:15:29,19.2,84,432,16.4,13.85,on,heat,24,auto,22,5,19883,ready,on,heat,24,auto,22,18,44917,ready
+2026-11-16 19:16:30,19.4,87,432,17.2,14.51,on,heat,24,auto,22,5,19883,ready,on,heat,24,auto,22,18,44917,ready
+2026-11-16 19:17:30,19.6,87,432,17.4,14.68,on,heat,24,auto,23,5,19883,ready,on,heat,24,auto,22,18,44917,ready
+2026-11-16 19:18:31,19.8,87,432,17.6,14.86,on,heat,24,auto,23,35,19940,ready,on,heat,24,auto,23,18,44917,ready
+2026-11-16 19:19:31,20.0,87,432,17.8,15.03,on,heat,24,auto,24,35,19940,ready,on,heat,24,auto,24,18,44917,ready
+2026-11-16 19:20:32,20.2,87,432,18.0,15.21,on,heat,24,auto,24,35,19940,ready,on,heat,24,auto,24,18,44917,ready
+2026-11-16 19:21:32,20.4,87,432,18.2,15.39,on,heat,24,auto,24,35,19940,ready,on,heat,24,auto,24,18,44917,ready

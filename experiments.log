@@ -6,3 +6,7 @@
 2026-11-16 19:03:33 cycle: start HI=21.5 LO=19.5 heat_sp=24.0
 2026-11-16 19:03:44 cycle: None -> heat at 18.2C RH 70%
 2026-11-16 19:12:10 self-check on sala (startSelfCheck): no result reported; left unit in fan/turbo; abs humidity 11.1 -> 13.0 g/m3 in 4 min = wet coil re-evaporating
+2026-11-16 19:12:34 cycle: start HI=21.5 LO=19.5 heat_sp=24.0
+2026-11-16 19:12:46 cycle: None -> heat at 18.9C RH 81%
+2026-11-16 19:18:09 event: second person arrived home (2 occupants now; ~40-60 g/h water each from breathing)
+2026-11-16 19:20:43 E4 heat phase: abs 11.1 -> 15.2 g/m3 in 17 min while heating (coil water + materials releasing moisture when warmed + 2 occupants)
