@@ -13,3 +13,4 @@
 2026-11-16 19:27:21 E5 start: both units continuous dry 18 (cycle stopped: heat phase re-released water; outdoor 18.3C 90% = 14.1 g/m3)
 2026-11-16 19:35:18 E5 actually started (heat->dry needs fan step; both units dry 18)
 2026-11-16 19:58:41 event: cooking started ~19:35 (reported by owner)
+2026-11-16 20:20:43 E5 plateau ~11.5 g/m3 at 18.6C since 19:55 (cooking; units near setpoint, quarto 2 W)

@@ -55,7 +55,7 @@ Scored from the living-room sensor. `climate.csv` has the minute-by-minute data 
 | E2 | sala: cool mode, 18°C, fan low | 1.8 g/m³/h (10.7 → 10.0) | ~190 W |
 | E3 | both units: dry mode, 18°C (doors open) | **+4.8 g/m³/h**, humidity rose (10.0 → 10.8 in 10 min) | ~200 W |
 | E4 | both units alternate: heat to 21.5°C, then dry down to 19.5°C (`cycle.py`) | **stopped**: heating took the air 11.1 → 15.2 g/m³ in 17 min | |
-| E5 | both units: continuous dry, 18°C | running | |
+| E5 | both units: continuous dry, 18°C | 14.4 → 11.0 g/m³ in 14 min (~12 g/m³/h), then flat at ~11.5 while cooking; sala 21.8 → 18.6°C | ~340 W |
 
 E2 started with drier air than E1 (less water left to pull out), so the comparison isn't perfectly
 fair, but dry mode clearly did better.
@@ -67,6 +67,11 @@ living room, which had been dried on its own until then. The bedroom was holding
 cool mode, SmartThings drops `heat` from both units' available modes. They share one outdoor unit
 (multi-split), and it can only run one direction at a time. Drying in winter cools the house, so E4
 alternates instead: heat until the living room hits 21.5°C, then dry until it falls to 19.5°C.
+
+E5 levels off because the room reaches the 18°C setpoint and the compressors throttle down (bedroom
+unit drawing 2 W at 20:20), while cooking, two people and 14 g/m³ outdoor air keep adding water.
+11.5 g/m³ is 72% at 18.6°C but would read ~57% at 21°C. The ACs can make the house dry *or* warm,
+not both: the heat lock means drying always cools.
 
 ## How it works
 
