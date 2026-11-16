@@ -70,7 +70,7 @@ alternates instead: heat until the living room hits 21.5°C, then dry until it f
 
 E5 levels off because the room reaches the 18°C setpoint and the compressors throttle down (bedroom
 unit drawing 2 W at 20:20), while cooking, two people and 14 g/m³ outdoor air keep adding water.
-11.5 g/m³ is 72% at 18.6°C but would read ~57% at 21°C. The ACs can make the house dry *or* warm,
+11.5 g/m³ is 72% at 18.6°C but would read ~63% at 21°C. After cooking it settled at ~12 g/m³ (~66% at 21°C) with the bedroom unit idle at 1 W: that is the floor these ACs reach on a 14 g/m³ night. The ACs can make the house dry *or* warm,
 not both: the heat lock means drying always cools.
 
 ## How it works
