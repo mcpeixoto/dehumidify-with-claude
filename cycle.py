@@ -32,7 +32,13 @@ while True:
         elif phase == "heat" and t >= HI: want = "dry"
         elif phase == "dry" and t <= LO: want = "heat"
         if want != phase:
-            if phase == "dry": set_all("fan", 24); time.sleep(20)  # release the heat lock
+            if phase == "dry":
+                # Off, not fan: a fan over the wet coil blows the condensate back into the room.
+                # 10 min lets the tray drain and releases the heat lock (shared outdoor unit).
+                for r in ROOMS: st.cmd(r, "switch", "off")
+                log(f"dry -> off (drain) at {t}C RH {rh}%"); time.sleep(600)
+                for r in ROOMS: st.cmd(r, "switch", "on")
+                time.sleep(10)
             set_all(want, HEAT_SP if want == "heat" else 18)
             log(f"{phase} -> {want} at {t}C RH {rh}%")
             phase = want
