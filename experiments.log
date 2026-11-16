@@ -10,3 +10,5 @@
 2026-11-16 19:12:46 cycle: None -> heat at 18.9C RH 81%
 2026-11-16 19:18:09 event: second person arrived home (2 occupants now; ~40-60 g/h water each from breathing)
 2026-11-16 19:20:43 E4 heat phase: abs 11.1 -> 15.2 g/m3 in 17 min while heating (coil water + materials releasing moisture when warmed + 2 occupants)
+2026-11-16 19:27:21 E5 start: both units continuous dry 18 (cycle stopped: heat phase re-released water; outdoor 18.3C 90% = 14.1 g/m3)
+2026-11-16 19:35:18 E5 actually started (heat->dry needs fan step; both units dry 18)

@@ -16,6 +16,10 @@ def log(msg):
     print(line, flush=True); open("experiments.log", "a").write(line + "\n")
 
 def set_all(mode, sp):
+    # Heat and dry/cool lock each other out (shared outdoor unit); passing through fan releases it.
+    for r in ROOMS:
+        st.cmd(r, "airConditionerMode", "setAirConditionerMode", "fan")
+    time.sleep(20)
     for r in ROOMS:
         st.cmd(r, "airConditionerMode", "setAirConditionerMode", mode)
     time.sleep(10)

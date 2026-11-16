@@ -36,6 +36,14 @@ reading it logged.
    condensate to the room. The raw OCF `execute` channel accepts commands on these 2025 units but
    returns nothing, so there's no deeper service data to read.
 
+5. **The outside air is as wet as the inside.** On 16 Nov at 19:15 it was 18.3°C and 90% outside
+   (Open-Meteo, Oeiras), i.e. **14.1 g/m³**, against 15.2 g/m³ indoors. Every draught brings that air
+   in, so the house drifts back to the outdoor water content, and opening windows tonight doesn't
+   help. To get ~55% at 21°C the air needs ~10 g/m³, which takes continuous drying, not sessions.
+6. **Warming the house releases water from walls and furniture.** During the first heating phase of
+   the cycle the air went 11.1 → 15.2 g/m³ in 17 min. The air holds only ~1 kg of water; the materials
+   hold tens of kg, and they give it back when warmed.
+
 ## Experiments
 
 Scored from the living-room sensor. `climate.csv` has the minute-by-minute data and
@@ -46,7 +54,8 @@ Scored from the living-room sensor. `climate.csv` has the minute-by-minute data 
 | E1 | sala: dry mode, 18°C, Auto Clean off | 4.4 g/m³/h (13.7 → 10.8) | ~180 W |
 | E2 | sala: cool mode, 18°C, fan low | 1.8 g/m³/h (10.7 → 10.0) | ~190 W |
 | E3 | both units: dry mode, 18°C (doors open) | **+4.8 g/m³/h**, humidity rose (10.0 → 10.8 in 10 min) | ~200 W |
-| E4 | both units alternate: heat to 21.5°C, then dry down to 19.5°C (`cycle.py`) | running | |
+| E4 | both units alternate: heat to 21.5°C, then dry down to 19.5°C (`cycle.py`) | **stopped**: heating took the air 11.1 → 15.2 g/m³ in 17 min | |
+| E5 | both units: continuous dry, 18°C | running | |
 
 E2 started with drier air than E1 (less water left to pull out), so the comparison isn't perfectly
 fair, but dry mode clearly did better.
@@ -68,6 +77,7 @@ alternates instead: heat until the living room hits 21.5°C, then dry until it f
 | `st.py` | Minimal SmartThings client: read AC status, set mode, setpoint, fan and Auto Clean. Reads the token from `~/.config/smartthings/token` and the device IDs from `~/.config/smartthings/devices.json`. |
 | `logger.py` | Every minute, writes the latest sensor reading and both ACs' state to `climate.csv`. |
 | `cycle.py` | `python3 cycle.py 21.5 19.5 24`: alternates both ACs between heat and dry, switching on the living-room temperature. |
+| `outdoor.py` | Every 15 min, logs outdoor temperature and humidity (Open-Meteo) to `outdoor.csv`. |
 | `rate.py` | `python3 rate.py "YYYY-MM-DD HH:MM" "YYYY-MM-DD HH:MM"` gives the water removed per hour and the energy used over that window. |
 
 ```bash

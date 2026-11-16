@@ -5,3 +5,4 @@ logger.log
 __pycache__/
 push.log
 cycle.log
+outdoor.log
