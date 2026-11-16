@@ -5,3 +5,4 @@
 2026-11-16 19:01:50 E4 start: sala dry 18 + quarto heat 24, doors open
 2026-11-16 19:03:33 cycle: start HI=21.5 LO=19.5 heat_sp=24.0
 2026-11-16 19:03:44 cycle: None -> heat at 18.2C RH 70%
+2026-11-16 19:12:10 self-check on sala (startSelfCheck): no result reported; left unit in fan/turbo; abs humidity 11.1 -> 13.0 g/m3 in 4 min = wet coil re-evaporating

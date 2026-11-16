@@ -28,6 +28,14 @@ reading it logged.
    fan to dry the coil, which blows the water it just collected back into the room. It is now off
    on both.
 
+4. **The water doesn't leave the unit: a fan blowing over the wet coil puts it back.** Samsung's
+   self-check (`samsungce.selfCheck` → `startSelfCheck`) never reported a result, but it left the
+   living-room unit on fan/turbo right after a drying run. In 4 minutes the water in the air went
+   **11.1 → 13.0 g/m³**, about half of what an hour of drying had removed. Every fan-only moment
+   (Auto Clean, dry mode's compressor-off pauses, switching from dry to heat) returns the
+   condensate to the room. The raw OCF `execute` channel accepts commands on these 2025 units but
+   returns nothing, so there's no deeper service data to read.
+
 ## Experiments
 
 Scored from the living-room sensor. `climate.csv` has the minute-by-minute data and
