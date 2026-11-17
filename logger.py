@@ -19,7 +19,10 @@ if __name__ == "__main__":
             ts, (t, rh, co2) = last_reading()
             row = [dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), t, rh, co2, round(dewpoint(t, rh),1), round(abs_hum(t, rh),2)]
             for r in st.DEV:
-                s = st.status(r); row += [s[k] for k in ["switch","mode","setpoint","fan","ac_temp","power_w","energy_wh","clean_state"]]
+                try:  # AC state is optional: a dead token must not stop the sensor log
+                    s = st.status(r); row += [s[k] for k in ["switch","mode","setpoint","fan","ac_temp","power_w","energy_wh","clean_state"]]
+                except Exception as e:
+                    print("st", r, e, flush=True); row += [""] * 8
             w.writerow(row)
         except Exception as e:
             print("err", e, flush=True)
